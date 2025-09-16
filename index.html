@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 06: Green Earth</title>
+
+    <link rel="stylesheet" href="./style/style.css">
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -16,14 +18,16 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
+      
+    
     />
   </head>
   <body>
     <div
-      class="navbar w-[100vw] bg-[#15803D] flex flex-col md:flex-row justify-between py-[24px] px-[135px]"
+      class="navbar w-[100vw] bg-[#15803D] flex flex-col md:flex-row gap-8 md:gap-0 justify-between py-[24px] px-[135px]"
     >
       <div class="nav-left text-white text-xl font-semibold">Green Earth</div>
-      <div class="nav-mid text-white space-x-10">
+      <div class="nav-mid text-white flex flex-col md:flex-row gap-6 md:gap-11 text-center md:text-balance">
         <a href="">About</a>
         <a href="">Gallery</a>
         <a href="">Plant a Tree</a>
@@ -38,7 +42,7 @@
     </div>
 
     <div
-      class="banner w-[100vw] bg-[#CFF0DC] flex flex-col md:flex-row justify-between items-center text-center"
+      class="banner w-[100vw] bg-[#CFF0DC] flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-center text-center"
     >
       <div class="banner-left">
         <img src="./assets/hero-leaf1.png" alt="" />
@@ -64,20 +68,20 @@
       <h2 class="banner-title text-4xl font-bold text-center mb-11">
         Choose Your Trees
       </h2>
-      <div class="main-container w-11/12 mx-auto border-2 border-red-500 flex gap-8">
+      <div class="main-container w-full md:w-11/12 mx-auto border-2 border-red-500 flex flex-col md:flex-row gap-8">
 
 
 
-        <div class="w-[20%]">
+        <div class="w-[100%] md:w-[20%] text-center md:text-balance">
                   <h2 class="categories-title text-3xl font-bold mb-8">Categories</h2>
-                  <p id="all-trees" onclick="loadAllTrees()" class="text-black w-full text-2xl pl-3 py-2 hover:bg-[#15803D] hover:text-white hover:cursor-pointer ">All Trees</p>
+                  <p id="all-trees" onclick="loadAllTrees(); newFunction();" class="all-the-trees text-black w-full rounded-xl text-2xl pl-3 py-2 hover:bg-[#15803D90] hover:text-white hover:cursor-pointer ">All Trees</p>
 
                    <div id="category-container" class="categories border-2 border-yellow-400"></div>
 
         </div>
 
        
-        <div id="plant-card-container" class="border-2 border-lime-400 w-[60%] grid grid-cols-3 gap-5">
+        <div id="plant-card-container" class="border-2 border-lime-400 w-[100%] md:w-[60%] grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5">
               
           </div>
 
@@ -89,6 +93,22 @@
         </div>
       </div>
     </main>
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="tree_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="tree-description-box" class="text-center p-6">
+
+    </div>
+    
+  <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
     <script src="index.js"></script>
   </body>
