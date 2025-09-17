@@ -70,7 +70,7 @@
         Choose Your Trees
       </h2>
       <div
-        class="main-container w-full md:w-11/12 mx-auto border-2 border-red-500 flex flex-col md:flex-row gap-8"
+        class="main-container w-full md:w-11/12 mx-auto flex flex-col md:flex-row gap-8"
       >
         <div class="w-[100%] md:w-[20%] text-center md:text-balance">
           <h2 class="categories-title text-3xl font-bold mb-8">Categories</h2>
@@ -84,7 +84,7 @@
 
           <div
             id="category-container"
-            class="categories border-2 border-yellow-400"
+            class="categories"
           ></div>
         </div>
 
@@ -97,7 +97,7 @@
 
         <div
           id="plant-card-container"
-          class="border-2 border-lime-400 w-[100%] md:w-[60%] grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5"
+          class="w-[100%] md:w-[60%] grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5"
         ></div>
 
         <div class="your-cart bg-white w-full md:w-[20%] p-4 rounded-xl">
@@ -119,30 +119,30 @@
       </div>
 
       <div
-        class="campaign w-full md:w-[53%] mx-auto border-2 border-amber-700 py-20"
+        class="campaign w-full md:w-[53%] mx-auto py-20"
       >
         <h1 class="text-2xl font-semibold text-center mb-10">
           About The Campaign
         </h1>
         <div
-          class="flex flex-col md:flex-row justify-between items-center gap-8"
+          class="flex flex-col-reverse md:flex-row justify-between items-center gap-8"
         >
           <img
-            class="w-full border-2 border-t-slate-700 md:w-1/2 h-auto md:h-[650px] rounded-lg"
+            class="w-full md:w-1/2 h-auto md:h-[650px] rounded-lg"
             src="./assets/about.png"
             alt=""
           />
           <div
-            class="text-lg text-gray-600 space-y-5 border-2 border-amber-500"
+            class="text-lg text-gray-600 space-y-5"
           >
-            <p class="text-justify border-2 border-cyan-600">
+            <p class="text-justify">
               Green Earth is a global tree plantation initiative dedicated to
               fighting climate change. Since our start, we’ve planted over
               500,000 trees worldwide. By joining our campaign, you help restore
               forests, create habitats for wildlife, and combat global warming.
             </p>
             <ul
-              class="list-disc pl-[35px] w-[100%] md:w-[50%] border-2 border-r-green-400"
+              class="list-disc pl-[35px]"
             >
               <li>Restoration of natural habitats</li>
               <li>Improvement of air quality</li>
@@ -152,13 +152,14 @@
         </div>
       </div>
       <div
-        class="numbers-main-container w-full border-2 border-sky-800 h-auto bg-[#CFF0DC]"
+        class="numbers-main-container w-full h-auto bg-[#CFF0DC] py-30"
       >
-        <h2 class="text-[#79747E] text-4xl font-bold text-center mt-25 mb-10">
+       <div>
+         <h2 class="text-[#79747E] text-4xl font-bold text-center mb-9">
           Our Impact
         </h2>
         <div
-          class="numbers-container w-11/12 flex flex-col md:flex-row justify-between gap-11 mx-auto text-center mb-25"
+          class="numbers-container w-11/12 flex flex-col md:flex-row justify-between gap-11 mx-auto text-center"
         >
           <div class="bg-white flex-1 space-y-3 rounded-lg py-10">
             <p class="text-4xl font-semibold text-[#15803D]">500K+</p>
@@ -175,6 +176,7 @@
             <p class="text-lg font-medium text-gray-500">Countries Reached</p>
           </div>
         </div>
+       </div>
       </div>
       <div class="w-full bg-[#166534] py-20">
         <h2 class="text-3xl font-semibold text-white text-center mb-8">Plant a Tree Today</h2>
