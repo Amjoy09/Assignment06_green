@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 06: Green Earth</title>
 
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -18,8 +18,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
-      
-    
     />
   </head>
   <body>
@@ -27,7 +25,9 @@
       class="navbar w-[100vw] bg-[#15803D] flex flex-col md:flex-row gap-8 md:gap-0 justify-between py-[24px] px-[135px]"
     >
       <div class="nav-left text-white text-xl font-semibold">Green Earth</div>
-      <div class="nav-mid text-white flex flex-col md:flex-row gap-6 md:gap-11 text-center md:text-balance">
+      <div
+        class="nav-mid text-white flex flex-col md:flex-row gap-6 md:gap-11 text-center md:text-balance"
+      >
         <a href="">About</a>
         <a href="">Gallery</a>
         <a href="">Plant a Tree</a>
@@ -55,7 +55,8 @@
           greener<br />for future generations.
         </p>
         <button
-          class="text-[#15803D] bg-[#FACC15] w-[130px] py-2 font-semibold rounded-3xl">
+          class="text-[#15803D] bg-[#FACC15] w-[130px] py-2 font-semibold rounded-3xl"
+        >
           Get Involved
         </button>
       </div>
@@ -68,47 +69,164 @@
       <h2 class="banner-title text-4xl font-bold text-center mb-11">
         Choose Your Trees
       </h2>
-      <div class="main-container w-full md:w-11/12 mx-auto border-2 border-red-500 flex flex-col md:flex-row gap-8">
-
-
-
+      <div
+        class="main-container w-full md:w-11/12 mx-auto border-2 border-red-500 flex flex-col md:flex-row gap-8"
+      >
         <div class="w-[100%] md:w-[20%] text-center md:text-balance">
-                  <h2 class="categories-title text-3xl font-bold mb-8">Categories</h2>
-                  <p id="all-trees" onclick="loadAllTrees(); newFunction();" class="all-the-trees text-black w-full rounded-xl text-2xl pl-3 py-2 hover:bg-[#15803D90] hover:text-white hover:cursor-pointer ">All Trees</p>
+          <h2 class="categories-title text-3xl font-bold mb-8">Categories</h2>
+          <p
+            id="all-trees"
+            onclick="loadAllTrees(); newFunction();"
+            class="all-the-trees text-black w-full rounded-xl text-2xl pl-3 py-2 hover:bg-[#15803D90] hover:text-white hover:cursor-pointer"
+          >
+            All Trees
+          </p>
 
-                   <div id="category-container" class="categories border-2 border-yellow-400"></div>
-
+          <div
+            id="category-container"
+            class="categories border-2 border-yellow-400"
+          ></div>
         </div>
 
-       
-        <div id="plant-card-container" class="border-2 border-lime-400 w-[100%] md:w-[60%] grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5">
-              
+        <div
+          id="spinner"
+          class="flex justify-center items-center w-full h-[100vh] remove"
+        >
+          <span class="loading loading-bars loading-xl"></span>
+        </div>
+
+        <div
+          id="plant-card-container"
+          class="border-2 border-lime-400 w-[100%] md:w-[60%] grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5"
+        ></div>
+
+        <div class="your-cart bg-white w-full md:w-[20%] p-4 rounded-xl">
+          <h4 class="yourcart-title text-3xl font-bold mb-4">Your Cart</h4>
+          <div id="cart-items-container"></div>
+          <div
+            id="cart-total"
+            class="cart-total hidden mt-5 pt-5 border-t-2 border-dotted border-[#15803D] font-bold text-xl"
+          >
+            Total: ৳<span>0</span>
           </div>
-
-
-        <div class="your-cart bg-white border-2 border-fuchsia-700 w-[w-20%]">
-         <h4 class="tourcart-title text-3xl font-bold">Your Cart</h4>
-         
-         
+          <div
+            id="empty-cart-message"
+            class="empty-cart-msg text-center text-[#64748b] mt-5"
+          >
+            Your cart is empty
+          </div>
         </div>
+      </div>
+
+      <div
+        class="campaign w-full md:w-[53%] mx-auto border-2 border-amber-700 py-20"
+      >
+        <h1 class="text-2xl font-semibold text-center mb-10">
+          About The Campaign
+        </h1>
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <img
+            class="w-full border-2 border-t-slate-700 md:w-1/2 h-auto md:h-[650px] rounded-lg"
+            src="./assets/about.png"
+            alt=""
+          />
+          <div
+            class="text-lg text-gray-600 space-y-5 border-2 border-amber-500"
+          >
+            <p class="text-justify border-2 border-cyan-600">
+              Green Earth is a global tree plantation initiative dedicated to
+              fighting climate change. Since our start, we’ve planted over
+              500,000 trees worldwide. By joining our campaign, you help restore
+              forests, create habitats for wildlife, and combat global warming.
+            </p>
+            <ul
+              class="list-disc pl-[35px] w-[100%] md:w-[50%] border-2 border-r-green-400"
+            >
+              <li>Restoration of natural habitats</li>
+              <li>Improvement of air quality</li>
+              <li>Support for local communities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="numbers-main-container w-full border-2 border-sky-800 h-auto bg-[#CFF0DC]"
+      >
+        <h2 class="text-[#79747E] text-4xl font-bold text-center mt-25 mb-10">
+          Our Impact
+        </h2>
+        <div
+          class="numbers-container w-11/12 flex flex-col md:flex-row justify-between gap-11 mx-auto text-center mb-25"
+        >
+          <div class="bg-white flex-1 space-y-3 rounded-lg py-10">
+            <p class="text-4xl font-semibold text-[#15803D]">500K+</p>
+            <p class="text-lg font-medium text-gray-500">Trees Planted</p>
+          </div>
+          <div class="bg-white flex-1 space-y-3 rounded-lg py-10">
+            <p class="text-4xl font-semibold text-[#15803D]">120+</p>
+            <p class="text-lg font-medium text-gray-500">
+              Communities Involved
+            </p>
+          </div>
+          <div class="bg-white flex-1 space-y-3 rounded-lg py-10">
+            <p class="text-4xl font-semibold text-[#15803D]">30+</p>
+            <p class="text-lg font-medium text-gray-500">Countries Reached</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full bg-[#166534] py-20">
+        <h2 class="text-3xl font-semibold text-white text-center mb-8">Plant a Tree Today</h2>
+        <form class="p-10 bg-[#15803D] max-w-[650px] mx-auto rounded-xl space-y-4">
+          <input
+            class="h-12 bg-white text-[#1F2937] rounded-lg pl-4 w-full"
+            type="text"
+            placeholder="Your Name"
+          /><br />
+          <input
+            class="h-12 bg-white text-[#1F2937] rounded-lg pl-4 w-full"
+            type="email"
+            placeholder="Your Email"
+          /><br />
+
+          <select class="bg-white h-12 rounded-lg text-[#1F2937] pl-4  w-full">
+            <option>Number of Trees</option>
+            <option>Fruit Tree</option>
+            <option>Shade Tree</option>
+            <option>Bamboo</option>
+            <option>Ornamental Tree</option>
+            <option>Medicinal Tree</option>
+          </select>
+          <br>
+
+          <input
+            class="h-12 bg-[#FACC15] text-[#166534] rounded-3xl text-center w-full"
+            type="button"
+            value="Donate Now"
+          />
+        </form>
       </div>
     </main>
     <!-- Open the modal using ID.showModal() method -->
-<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
-<dialog id="tree_modal" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
-    <div id="tree-description-box" class="text-center p-6">
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="tree_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="tree-description-box" class="text-center p-6"></div>
 
-    </div>
-    
-  <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
-      </form>
-    </div>
-  </div>
-</dialog>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+
+    <footer class="w-full bg-[#14532D] py-6">
+      <p class="text-[#FFFFFF] text-center">© 2025 Green Earth. All Rights Reserved.</p>
+    </footer>
 
     <script src="index.js"></script>
   </body>
